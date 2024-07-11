@@ -38,7 +38,7 @@ parts:
     plugin: cmake
 
   marknote:
-    after: [kirigami-addons]
+    after: [kirigami-addons, kmime]
     parse-info:
       - usr/share/metainfo/org.kde.marknote.metainfo.xml
     plugin: cmake
