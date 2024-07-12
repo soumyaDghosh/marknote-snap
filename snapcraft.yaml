@@ -30,12 +30,24 @@ parts:
     source-tag: 'v1.3.0'
     source-depth: 1
     plugin: cmake
+    cmake-parameters:
+      - -DBUILD_TESTING=OFF
+      - -DCMAKE_BUILD_TYPE=Release
+    prime:
+      - -usr/include
+      - -usr/lib/*/cmake
 
   kmime:
     source: https://invent.kde.org/pim/kmime.git
     source-tag: 'v24.05.2'
     source-depth: 1
     plugin: cmake
+    cmake-parameters:
+      - -DBUILD_TESTING=OFF
+      - -DCMAKE_BUILD_TYPE=Release
+    prime:
+      - -usr/include
+      - -usr/lib/*/cmake
 
   marknote:
     after: [kirigami-addons, kmime]
