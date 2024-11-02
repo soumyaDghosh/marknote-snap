@@ -14,6 +14,8 @@ apps:
     common-id: org.kde.marknote
     desktop: usr/share/applications/org.kde.marknote.desktop
     command: usr/bin/marknote
+    environment:
+      XDG_CONFIG_DIRS: $SNAP_REAL_HOME/.config:$XDG_CONFIG_DIRS
     plugs:
       - home
       - removable-media
