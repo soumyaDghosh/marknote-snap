@@ -27,18 +27,6 @@ slots:
     bus: session
 
 parts:
-  kirigami-addons:
-    source: https://invent.kde.org/libraries/kirigami-addons.git
-    source-tag: 'v1.3.0'
-    source-depth: 1
-    plugin: cmake
-    cmake-parameters:
-      - -DBUILD_TESTING=OFF
-      - -DCMAKE_BUILD_TYPE=Release
-    prime:
-      - -usr/include
-      - -usr/lib/*/cmake
-
   kmime:
     source: https://invent.kde.org/pim/kmime.git
     source-tag: 'v24.05.2'
@@ -52,7 +40,7 @@ parts:
       - -usr/lib/*/cmake
 
   marknote:
-    after: [kirigami-addons, kmime]
+    after: [kmime]
     parse-info:
       - usr/share/metainfo/org.kde.marknote.metainfo.xml
     plugin: cmake
