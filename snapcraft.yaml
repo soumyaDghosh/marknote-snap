@@ -47,6 +47,8 @@ parts:
     source: https://invent.kde.org/office/marknote/-/archive/v1.3.0/marknote-v1.3.0.tar.gz
     build-environment:
       - CMAKE_PREFIX_PATH: $CRAFT_STAGE/usr:/snap/kde-qt6-core22-sdk/current/usr:/snap/kf6-core22-sdk/current/usr${CMAKE_PREFIX_PATH:+:$CMAKE_PREFIX_PATH}
+    build-packages:
+      - libproxy1v5
     cmake-parameters:
       - -DCMAKE_INSTALL_PREFIX=/usr
       - -DCMAKE_BUILD_TYPE=Release
